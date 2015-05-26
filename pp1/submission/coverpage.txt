@@ -1,0 +1,30 @@
+Elijah Verdoorn
+CSCI 241: Hardware Design
+Professor R. Brown
+10/6/14
+
+I have programmed this project with the assistance of the following resources:
+wiki.python.org
+	- Descriptions of Python3 conventions and information on the use of 
+	lists
+StackOverflow.com
+	- User Ignacio Vazquez-Abrams
+	- Information on the conversion of a string of bianary data into it's 
+	hexidecimal representation
+docs.python.org
+	- python standard documentation, information on lists and data 
+	structures in python3
+tutorialspoint.com
+	- informaiton on the .reverse() function
+
+I pledge my honor that I have neither given nor received assistance on this 
+programming project, except as explicitly stated on this page, 
+and that I have seen no dishonest work.
+Signed
+
+
+
+
+
+I have intentionally not signed the pledge [ ]
+(check only if appropriate)

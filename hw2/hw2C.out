@@ -1,0 +1,662 @@
+Script started on Mon 08 Sep 2014 03:12:51 PM CDT
+rns202-21.cs.stolaf.edu% sqrt[K[K[K[K./sqrts1
+n	sqrt(n)
+----------------
+0	0
+1	1
+2	1.41421
+3	1.73205
+4	2
+5	2.23607
+rns202-21.cs.stolaf.edu% cp cs241/hw/sqrts.c .
+cp: cannot stat ‘cs241/hw/sqrts.c’: No such file or directory
+rns202-21.cs.stolaf.edu% cp ~cs241/hw/sqrts.c .
+rns202-21.cs.stolaf.edu% dir
+hw2C.out  sqrts1  sqrts.c  sqrts.C  sqrts.C~
+rns202-21.cs.stolaf.edu% emace[Ks[K[K[K[K[Kemacs sqrts.c
+gcc     gcc -o sqrts.c
+rns202-21.cs.stolaf.edu% gcc -o sqrts.c
+gcc: fatal error: no input files
+compilation terminated.
+rns202-21.cs.stolaf.edu% c[Kgcc -o sqrts.c c[K[K2 sqrts.c -lm
+rns202-21.cs.stolaf.edu% dir
+hw2C.out  sqrts1  sqrts2  sqrts.c  sqrts.c~  sqrts.C  sqrts.C~
+rns202-21.cs.stolaf.edu% /.sqrts2
+/.sqrts2: Command not found.
+rns202-21.cs.stolaf.edu% sqrts2
+sqrts2: Command not found.
+rns202-21.cs.stolaf.edu% sqrts2[26G[2@/.[34G[26Gdir[Kgcc -o sqrts2 sqrts.c -lm[38G.c[K[26G[Pemacs[39G[26Gcp ~cs241/hw/sqrts.c .[29G[P[47G[26G./sqrts1[K21
+./sqrts21: Command not found.
+rns202-21.cs.stolaf.edu% ./sqrts21[K
+n	sqrt(n)
+----------------
+0	0.000000
+1	1.000000
+2	1.414214
+3	1.732051
+4	2.000000
+5	2.236068
+rns202-21.cs.stolaf.edu% cp ~cs241.[K\hw\[K[K[K[K/hw/sqrts.scm .
+rns202-21.cs.stolaf.edu% dir
+hw2C.out  sqrts1  sqrts2  sqrts.c  sqrts.c~  sqrts.C  sqrts.C~	sqrts.scm
+rns202-21.cs.stolaf.edu% emacs scrts.scm
+rns202-21.cs.stolaf.edu% cat s[K[K[K[Kscheme
+Error: /usr/local/bin64/scheme does not exist!
+rns202-21.cs.stolaf.edu% mzscheme
+Error: /home/mscs/bin64/scheme does not exist!
+(trying bin32 instead...)
+Welcome to MzScheme version 360, Copyright (c) 2004-2006 PLT Scheme Inc.
+> ^T^T    (define,.   print             (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)
+> (sqrt n)> 
+> ----------> 
+> 0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)
+> (sqrt n)> 
+> ----------> 
+> 0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+> display       (display "(sqrr t n()  )' ")^[[D^[[D^[[D             ^[[D^[[C           n  )"0 )   /t  /t  /t)"            n)
+reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> ^[[A^[[A^[[A^[[A^[[A                    (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+> dis   (s display s          (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display n)
+(display "\t")
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)
+> reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 	> (sqrt n)> 
+> ----------> 
+> 0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(sqrt n)")
+(display n)
+(display "\t")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)
+> (sqrt n)> reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 	> 
+> ----------> 
+> 0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(n "\t"sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)> reference to undefined identifier: t
+
+ === context ===
+repl-loop
+
+> 
+> ----------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(n "\t"sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > reference to undefined identifier: t
+
+ === context ===
+repl-loop
+
+> 
+> ----------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "("\t"sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > reference to undefined identifier: t
+
+ === context ===
+repl-loop
+
+> 
+> ----------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display n)
+(display "\t")
+(display (sqrt n))
+(newline)
+(display "------------------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 	> reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 
+> ------------------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display n)
+(display "\t")
+(display (sqrt n))
+(newline)
+(display "------------------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 	> reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 
+> ------------------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "n")
+(display "\t")
+(display (sqrt n))
+(newline)
+(display "------------------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > n> 	> reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 
+> ------------------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "n")
+(display "\t")
+(display "(sqrt n)")
+(newline)
+(display "------------------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > n> 	> (sqrt n)> 
+> ------------------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display n)
+(display "\t")
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > reference to undefined identifier: n
+
+ === context ===
+repl-loop
+
+> 	> (sqrt n)> 
+> ----------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+	(begin 
+(display n)
+(display "\t")
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))
+
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+done
+> > (sqrt n)> 
+> ----------> 
+> (define print-sqrts
+  (lambda (n) ; print square roots from n to 5
+    (if (>  n 5) 'done
+     (begin  
+          (display n
+          (display "\t"
+	  (display (sqrt n))
+	  (newline)
+	  (print-sqrts (+ n 1))))))))
+
+(display "(sqrt n)")
+(newline)
+(display "----------")
+(newline)
+(print-sqrts 0)0	0
+1	1
+2	1.4142135623730951
+3	1.7320508075688772
+4	2
+5	2.23606797749979
+done
+> > (sqrt n)> 
+> ----------> 
+> (exit)
+0
+1
+1.4142135623730951
+1.7320508075688772
+2
+2.23606797749979
+display: expects 1 to 2 arguments, given 4: "\t" #<void> #<void> done
+
+ === context ===
+stdin::3786: print-sqrts
+stdin::3786: print-sqrts
+stdin::3786: print-sqrts
+stdin::3786: print-sqrts
+stdin::3786: print-sqrts
+stdin::3786: print-sqrts
+repl-loop
+
+> rns202-21.cs.stolaf.edu% cp ~cs241/HD.[K/[K[K[Khw/sqry[Kts[K[K[K[K[KSqrts.jaj[Kva .
+rns202-21.cs.stolaf.edu% dir
+hw2C.out  sqrts2   sqrts.c~  sqrts.C~	 sqrts.scm
+sqrts1	  sqrts.c  sqrts.C   Sqrts.java
+rns202-21.cs.stolaf.edu% en[Kmacs Sqrts.jaj[Kva
+rns202-21.cs.stolaf.edu% cat s[KSqrts.java
+/* print square roots in Java language.  R. Brown, 9/2010 */
+
+class Sqrts {
+  public static void main(String args[]) {
+    System.out.println("sqrt(n)");
+    System.out.println("----------------");
+    int n;
+    for (n=0;  n<=5;  n++)
+      System.out.println("n" + "\t" + "sqrt" + Math.sqrt(n));
+    return;
+
+  }
+}
+rns202-21.cs.stolaf.edu% javac Sqrts.java
+rns202-21.cs.stolaf.edu% Sqrts.java
+Sqrts.java: Command not found.
+rns202-21.cs.stolaf.edu% /.Sqrts.java
+/.Sqrts.java: Command not found.
+rns202-21.cs.stolaf.edu% java Sqrts
+sqrt(n)
+----------------
+n	sqrt0.0
+n	sqrt1.0
+n	sqrt1.4142135623730951
+n	sqrt1.7320508075688772
+n	sqrt2.0
+n	sqrt2.23606797749979
+rns202-21.cs.stolaf.edu% emaca[K[Ka[Kcs Jav[K[K[Ksq[K[KSqrts.java
+rns202-21.cs.stolaf.edu% javac Sqrts.java
+rns202-21.cs.stolaf.edu% java Sqrts
+n	sqrt(n)
+----------------
+0	0.0
+1	1.0
+2	1.4142135623730951
+3	1.7320508075688772
+4	2.0
+5	2.23606797749979
+rns202-21.cs.stolaf.edu% cp ~cs241\\[K[K/ hw/.[Ksqrts.py .
+rns202-21.cs.stolaf.edu% pyth[K[K[K[Kemacs sqrts.py
+rns202-21.cs.stolaf.edu% y[Kpythi[Kon3 sqrts.py
+  File "sqrts.py", line 8
+    print(n\tsqrt(n))
+                    ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% emaca[Ks sqrts.py
+rns202-21.cs.stolaf.edu% pythin[K[Kon2[K3 sqrts.py
+  File "sqrts.py", line 8
+    print(n \t sqrt(n))
+                      ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% emacs sqrts.py
+rns202-21.cs.stolaf.edu% cat sqt[Krts.py
+# print square roots in Python language.  R. Brown, 9/2010 
+
+from math import sqrt
+
+print("n")
+print("\t")
+print("sqrt(n)\n----------------")
+
+for n in range(0, 6):
+    print(n)
+    print(\t)
+    print(sqrt(n))
+rns202-21.cs.stolaf.edu% pythin[K[Kon3sqr[K[K[K sqrts.py
+  File "sqrts.py", line 11
+    print(\t)
+            ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% emacs.[K py[K[Ksqrts.[K,[K.py
+rns202-21.cs.stolaf.edu% cat sqrts.py
+# print square roots in Python language.  R. Brown, 9/2010 
+
+from math import sqrt
+
+print("n")
+print("\t")
+print("sqrt(n)\n----------------")
+
+for n in range(0, 6):
+    print(n)
+    print("\t")
+    print(sqrt(n))
+rns202-21.cs.stolaf.edu% pythin[K[Kon3 strtts[K[K[K[K[Kqrts.[K.py
+n
+	
+sqrt(n)
+----------------
+0
+	
+0.0
+1
+	
+1.0
+2
+	
+1.41421356237
+3
+	
+1.73205080757
+4
+	
+2.0
+5
+	
+2.2360679775
+rns202-21.cs.stolaf.edu% emacs pythin[K[K[K[K[K[Ksqrts.py
+rns202-21.cs.stolaf.edu% pytho n 3 sqrts.py
+n	sqrt(n)
+--------------
+0
+	
+0.0
+1
+	
+1.0
+2
+	
+1.41421356237
+3
+	
+1.73205080757
+4
+	
+2.0
+5
+	
+2.2360679775
+rns202-21.cs.stolaf.edu% emacs sqrts.py
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n"\t"sqrt(n))
+              ^
+SyntaxError: invalid syntax
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n "\t" sqrt(n))
+               ^
+SyntaxError: invalid syntax
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n \t sqrt(n))
+                      ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n "\t" sqrt(n))
+               ^
+SyntaxError: invalid syntax
+rns202-21.cs.stolaf.edu% python3 sqrts.py
+  File "sqrts.py", line 8
+    print(n "\t" sqrt(n))
+               ^
+SyntaxError: invalid syntax
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n\tsqrt(n))
+                    ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n\t sqrt(n))
+                     ^
+SyntaxError: unexpected character after line continuation character
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G[26G[2@python3[42G[26G[2Pemacs[40G
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+  File "sqrts.py", line 8
+    print(n"\t")
+              ^
+SyntaxError: invalid syntax
+rns202-21.cs.stolaf.edu% python3 sqrts.py[26G[2Pemacs[40G
+^Z
+Suspended
+rns202-21.cs.stolaf.edu% emacs sqrts.py
+[1]  + Killed                        emacs sqrts.py
+rns202-21.cs.stolaf.edu% emacs sqrts.py[26G[2@python3[42G
+n	sqrt(n)
+--------------
+0
+	
+0.0
+1
+	
+1.0
+2
+	
+1.41421356237
+3
+	
+1.73205080757
+4
+	
+2.0
+5
+	
+2.2360679775
+rns202-21.cs.stolaf.edu% exit
+exit
+
+Script done on Mon 08 Sep 2014 04:11:44 PM CDT

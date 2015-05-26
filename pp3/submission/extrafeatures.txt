@@ -1,0 +1,1 @@
+There is additional analysis performed when the program is quit using control-d.

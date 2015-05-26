@@ -1,0 +1,6 @@
+List of Local variables in the Java program TestVars.java:
+- count
+- value
+- prompt
+- val
+- x

@@ -1,0 +1,65 @@
+!!! copy standard input to standard output, skipping spaces
+!!! R. Brown, 11/05
+
+	_EXIT = 1
+	_READ = 3
+	_WRITE = 4
+	_STDIN = 0
+	_STDOUT = 1
+
+	BUFFSIZE = 160
+
+.SECT .TEXT
+start:
+	PUSH	size-prompt	! print prompt
+	PUSH	prompt
+	PUSH	_STDOUT		! on standard output
+	PUSH	_WRITE
+	SYS
+	ADD	SP,8		! clean up stack
+
+1:	PUSH	BUFFSIZE
+	PUSH	inbuff
+	PUSH	_STDIN
+	PUSH	_READ
+	SYS
+	ADD	SP,8
+	CMPB	(inbuff), '\n'
+	MOV	CX, size-inbuff	! for loop control
+	MOV	BX, 0
+	JE	3f		! if a newline is found, then jump to label 3
+
+2:	PUSH	BUFFSIZE	! printing the input on standard output
+	PUSH	inbuff
+	PUSH	_STDOUT
+	PUSH	_WRITE
+	SYS
+	ADD	SP,8
+	PUSH	1
+	JMP	9f
+
+3:	CMPB	(inbuff), 0	! top of the loop
+	JE	9f
+	CMPB	(inbuff), 65
+	JL	3b
+	CMPB	(inbuff), 90
+	JG	3b
+	ADD	(inbuff), 32
+	CMPB	BX, (CX)
+	JL	4f
+	INC	BX
+	JMP	3		! jump back to the top of the loop
+	
+4:	
+	
+9: 	PUSH    0               ! exit with normal exit status
+	PUSH    _EXIT           
+	SYS  
+
+.SECT .DATA
+prompt:	.ASCII "Enter an Phrase: \n"
+size:	.WORD	0		! length of input
+newline:	.ASCII "\n"
+inbuff:	.SPACE BUFFSIZE
+outbuff: .SPACE BUFFSIZE
+.SECT .BSS

@@ -1,0 +1,19 @@
+import java.io.*;
+
+public class hamming
+{
+    public static void main(String args[])
+    {
+	/* Notes: must have a space for a 16 bit input, from hexadecimal.
+	   convert to bianary with the Integer. convert functions
+	   make the bianary one longer than the input, 21?
+	   use the >> and << to move to where the hamming shit should be
+	   make space (set to 0)
+	   calculate if the hamming should be 0 or 1
+	   input the hamming in the right spot
+	*/
+	
+
+
+    }
+}

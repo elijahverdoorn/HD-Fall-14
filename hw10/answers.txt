@@ -1,0 +1,23 @@
+Homework 10
+Elijah Verdoorn
+
+B.  1. 100110100011101100111 (used my programming project)
+	2. 0 0 0 0 0 1 0 0 0 0 1 1 0 0 1 0 1 1 1 0 1
+		a. 233D
+		b. Parity bits 1,2,4 are incorrect
+		c. 213D
+C.  1.  a. 211
+		b. -45
+		c. 45
+		d. -53
+	2.  a. 00100101, 11010101
+		b. 11111111
+	3. the sign of the answer is in that position, and is not a part of what should be addes since it is only indicating if the number is positive or negitive
+D. 20. 5 rotations/cylinder
+	   50,000 rotations
+	   500 seconds
+   10. 6000000 bits
+   	   average gene =200000 bits
+    7. 4 trits
+       3^k
+       

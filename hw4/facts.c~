@@ -1,0 +1,44 @@
+/* print square roots in C language.  R. Brown, 9/2010 */
+
+#include <stdio.h>
+#include <math.h>
+
+long factorial(int par)
+{
+  long answer = 1;
+  int c = 1;
+  while(c < par)
+    {
+      answer = answer * c;
+      c++;
+    }
+  return answer;
+  /*
+  the same function as the original for statement
+  for (c = 1; c <= par; c++)
+    {
+      answer = answer * c;
+    }
+  */
+}
+
+main()
+{
+  int n = 0;
+  printf("n\tfactorial(n)\n--------------------\n");
+  do
+    {
+      printf("%d\t%d\n", n, factorial(n));
+      n++;
+    }
+  while(n <= 6)
+
+  /*
+    the function's original for statement
+  for (n=0;  n<=6;  n++)
+    {
+      printf("%d\t%d\n", n, factorial(n));
+    }
+  */
+  return 0;
+}

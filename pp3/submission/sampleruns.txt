@@ -1,0 +1,61 @@
+Sample Runs:
+
+rns203-1.cs.stolaf.edu% ./s88 trans
+Enter the translation key:
+e r
+Enter lines to be translated:
+elijah verdoorn
+rlijah vrrdoorn
+Hello, World!
+Hrllo, World!
+this is the translate function at work.
+this is thr translatr function at work.
+Summary:
+5 translations
+70 characters
+11 words
+3 lines
+11 whitespace characters
+3 punctuation marks
+
+
+rns203-1.cs.stolaf.edu% ./s88 trans
+Enter the translation key:
+t y
+Enter lines to be translated:
+thank you!
+yhank you!
+this is the translate function at work
+yhis is yhe yranslaye funcyion ay work
+it counts many things
+iy counys many yhings
+and prints them when comtrol D is pressed.
+and prinys yhem when comyrol D is pressed.
+Summary:
+13 translations
+115 characters
+21 words
+4 lines
+21 whitespace characters
+2 punctuation marks
+
+
+rns203-1.cs.stolaf.edu% ./s88 trans
+Enter the translation key:
+1 2
+Enter lines to be translated:
+1000
+2000
+1111
+2222
+2222
+2222
+it does numbers, too!
+it does numbers, too!
+Summary:
+5 translations
+37 characters
+4 words
+4 lines
+7 whitespace characters
+2 punctuation marks
